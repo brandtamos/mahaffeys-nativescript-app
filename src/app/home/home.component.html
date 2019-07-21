@@ -1,0 +1,11 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+
+<GridLayout class="page page-content">
+    <ListView [items]="members" class="list-group">
+        <ng-template let-item="member">
+            <Label [nsRouterLink]="['../item', member.memberId]" [text]="member.name" class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+</GridLayout>
